@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		EE8F41801EFBEBE300DD5265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F417F1EFBEBE300DD5265 /* AppDelegate.swift */; };
-		EE8F41821EFBEBE300DD5265 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41811EFBEBE300DD5265 /* ViewController.swift */; };
 		EE8F41851EFBEBE300DD5265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41831EFBEBE300DD5265 /* Main.storyboard */; };
 		EE8F41871EFBEBE300DD5265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41861EFBEBE300DD5265 /* Assets.xcassets */; };
-		EE8F418A1EFBEBE300DD5265 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41881EFBEBE300DD5265 /* LaunchScreen.storyboard */; };
 		EE8F41951EFBEBE300DD5265 /* ____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41941EFBEBE300DD5265 /* ____Tests.swift */; };
 		EE8F41A01EFBEBE300DD5265 /* ____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F419F1EFBEBE300DD5265 /* ____UITests.swift */; };
+		EE8F41BE1EFCB34000DD5265 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41BC1EFCB34000DD5265 /* Home.storyboard */; };
+		EE8F41C11EFCB38100DD5265 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41BF1EFCB38100DD5265 /* Live.storyboard */; };
+		EE8F41C41EFCB3AA00DD5265 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41C21EFCB3AA00DD5265 /* Follow.storyboard */; };
+		EE8F41C71EFCB3C100DD5265 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41C51EFCB3C100DD5265 /* Profile.storyboard */; };
+		EE8F41EE1EFCB65900DD5265 /* MainTarBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41ED1EFCB65900DD5265 /* MainTarBarViewController.swift */; };
+		EE8F41F21EFCB72D00DD5265 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F11EFCB72D00DD5265 /* HomeViewController.swift */; };
+		EE8F41F41EFCB74900DD5265 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F31EFCB74900DD5265 /* LiveViewController.swift */; };
+		EE8F41F61EFCB76100DD5265 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F51EFCB76000DD5265 /* ProfileViewController.swift */; };
+		EE8F41F81EFCB77B00DD5265 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F71EFCB77B00DD5265 /* FollowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +43,8 @@
 /* Begin PBXFileReference section */
 		EE8F417C1EFBEBE300DD5265 /* 斗鱼直播.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼直播.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F417F1EFBEBE300DD5265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE8F41811EFBEBE300DD5265 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE8F41841EFBEBE300DD5265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE8F41861EFBEBE300DD5265 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EE8F41891EFBEBE300DD5265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE8F418B1EFBEBE300DD5265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8F41901EFBEBE300DD5265 /* 斗鱼直播Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "斗鱼直播Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F41941EFBEBE300DD5265 /* ____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____Tests.swift"; sourceTree = "<group>"; };
@@ -47,6 +52,15 @@
 		EE8F419B1EFBEBE300DD5265 /* 斗鱼直播UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "斗鱼直播UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F419F1EFBEBE300DD5265 /* ____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "____UITests.swift"; sourceTree = "<group>"; };
 		EE8F41A11EFBEBE300DD5265 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE8F41BD1EFCB34000DD5265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		EE8F41C01EFCB38100DD5265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Live.storyboard; sourceTree = "<group>"; };
+		EE8F41C31EFCB3AA00DD5265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Follow.storyboard; sourceTree = "<group>"; };
+		EE8F41C61EFCB3C100DD5265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		EE8F41ED1EFCB65900DD5265 /* MainTarBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTarBarViewController.swift; sourceTree = "<group>"; };
+		EE8F41F11EFCB72D00DD5265 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EE8F41F31EFCB74900DD5265 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		EE8F41F51EFCB76000DD5265 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EE8F41F71EFCB77B00DD5265 /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +111,9 @@
 		EE8F417E1EFBEBE300DD5265 /* 斗鱼直播 */ = {
 			isa = PBXGroup;
 			children = (
+				EE8F41C81EFCB4C400DD5265 /* Classes */,
 				EE8F417F1EFBEBE300DD5265 /* AppDelegate.swift */,
-				EE8F41811EFBEBE300DD5265 /* ViewController.swift */,
-				EE8F41831EFBEBE300DD5265 /* Main.storyboard */,
 				EE8F41861EFBEBE300DD5265 /* Assets.xcassets */,
-				EE8F41881EFBEBE300DD5265 /* LaunchScreen.storyboard */,
 				EE8F418B1EFBEBE300DD5265 /* Info.plist */,
 			);
 			path = "斗鱼直播";
@@ -123,6 +135,231 @@
 				EE8F41A11EFBEBE300DD5265 /* Info.plist */,
 			);
 			path = "斗鱼直播UITests";
+			sourceTree = "<group>";
+		};
+		EE8F41C81EFCB4C400DD5265 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F41E81EFCB58200DD5265 /* Follow */,
+				EE8F41D31EFCB4C400DD5265 /* Home */,
+				EE8F41D81EFCB4C400DD5265 /* Live */,
+				EE8F41DD1EFCB4C400DD5265 /* Main */,
+				EE8F41E21EFCB4C400DD5265 /* Profile */,
+				EE8F41E71EFCB4C400DD5265 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EE8F41D31EFCB4C400DD5265 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F41D41EFCB4C400DD5265 /* Controllers */,
+				EE8F41D51EFCB4C400DD5265 /* Models */,
+				EE8F41D61EFCB4C400DD5265 /* ViewModels */,
+				EE8F41D71EFCB4C400DD5265 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EE8F41D41EFCB4C400DD5265 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F41BC1EFCB34000DD5265 /* Home.storyboard */,
+				EE8F41F11EFCB72D00DD5265 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE8F41D51EFCB4C400DD5265 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE8F41D61EFCB4C400DD5265 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EE8F41D71EFCB4C400DD5265 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE8F41D81EFCB4C400DD5265 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F41D91EFCB4C400DD5265 /* Controllers */,
+				EE8F41DA1EFCB4C400DD5265 /* Models */,
+				EE8F41DB1EFCB4C400DD5265 /* ViewModels */,
+				EE8F41DC1EFCB4C400DD5265 /* Views */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		EE8F41D91EFCB4C400DD5265 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F41BF1EFCB38100DD5265 /* Live.storyboard */,
+				EE8F41F31EFCB74900DD5265 /* LiveViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE8F41DA1EFCB4C400DD5265 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE8F41DB1EFCB4C400DD5265 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EE8F41DC1EFCB4C400DD5265 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE8F41DD1EFCB4C400DD5265 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F41DE1EFCB4C400DD5265 /* Controllers */,
+				EE8F41DF1EFCB4C400DD5265 /* Models */,
+				EE8F41E01EFCB4C400DD5265 /* ViewModels */,
+				EE8F41E11EFCB4C400DD5265 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EE8F41DE1EFCB4C400DD5265 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F41831EFBEBE300DD5265 /* Main.storyboard */,
+				EE8F41ED1EFCB65900DD5265 /* MainTarBarViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE8F41DF1EFCB4C400DD5265 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE8F41E01EFCB4C400DD5265 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EE8F41E11EFCB4C400DD5265 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE8F41E21EFCB4C400DD5265 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F41E31EFCB4C400DD5265 /* Controllers */,
+				EE8F41E41EFCB4C400DD5265 /* Models */,
+				EE8F41E51EFCB4C400DD5265 /* ViewModels */,
+				EE8F41E61EFCB4C400DD5265 /* Views */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EE8F41E31EFCB4C400DD5265 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F41C51EFCB3C100DD5265 /* Profile.storyboard */,
+				EE8F41F51EFCB76000DD5265 /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE8F41E41EFCB4C400DD5265 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE8F41E51EFCB4C400DD5265 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EE8F41E61EFCB4C400DD5265 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE8F41E71EFCB4C400DD5265 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		EE8F41E81EFCB58200DD5265 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F41E91EFCB58200DD5265 /* Controllers */,
+				EE8F41EA1EFCB58200DD5265 /* Models */,
+				EE8F41EB1EFCB58200DD5265 /* ViewModels */,
+				EE8F41EC1EFCB58200DD5265 /* Views */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		EE8F41E91EFCB58200DD5265 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE8F41C21EFCB3AA00DD5265 /* Follow.storyboard */,
+				EE8F41F71EFCB77B00DD5265 /* FollowViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE8F41EA1EFCB58200DD5265 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE8F41EB1EFCB58200DD5265 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EE8F41EC1EFCB58200DD5265 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +430,7 @@
 				TargetAttributes = {
 					EE8F417B1EFBEBE300DD5265 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = J6NT87KVZZ;
 						ProvisioningStyle = Automatic;
 					};
 					EE8F418F1EFBEBE300DD5265 = {
@@ -232,9 +470,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE8F418A1EFBEBE300DD5265 /* LaunchScreen.storyboard in Resources */,
 				EE8F41871EFBEBE300DD5265 /* Assets.xcassets in Resources */,
 				EE8F41851EFBEBE300DD5265 /* Main.storyboard in Resources */,
+				EE8F41C11EFCB38100DD5265 /* Live.storyboard in Resources */,
+				EE8F41BE1EFCB34000DD5265 /* Home.storyboard in Resources */,
+				EE8F41C71EFCB3C100DD5265 /* Profile.storyboard in Resources */,
+				EE8F41C41EFCB3AA00DD5265 /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +500,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE8F41821EFBEBE300DD5265 /* ViewController.swift in Sources */,
 				EE8F41801EFBEBE300DD5265 /* AppDelegate.swift in Sources */,
+				EE8F41EE1EFCB65900DD5265 /* MainTarBarViewController.swift in Sources */,
+				EE8F41F61EFCB76100DD5265 /* ProfileViewController.swift in Sources */,
+				EE8F41F81EFCB77B00DD5265 /* FollowViewController.swift in Sources */,
+				EE8F41F41EFCB74900DD5265 /* LiveViewController.swift in Sources */,
+				EE8F41F21EFCB72D00DD5265 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +547,43 @@
 				EE8F41841EFBEBE300DD5265 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
-		EE8F41881EFBEBE300DD5265 /* LaunchScreen.storyboard */ = {
+		EE8F41BC1EFCB34000DD5265 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE8F41891EFBEBE300DD5265 /* Base */,
+				EE8F41BD1EFCB34000DD5265 /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Home.storyboard;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		EE8F41BF1EFCB38100DD5265 /* Live.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE8F41C01EFCB38100DD5265 /* Base */,
+			);
+			name = Live.storyboard;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		EE8F41C21EFCB3AA00DD5265 /* Follow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE8F41C31EFCB3AA00DD5265 /* Base */,
+			);
+			name = Follow.storyboard;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		EE8F41C51EFCB3C100DD5265 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE8F41C61EFCB3C100DD5265 /* Base */,
+			);
+			name = Profile.storyboard;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -414,6 +688,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = J6NT87KVZZ;
 				INFOPLIST_FILE = "斗鱼直播/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PHICOMM.----";
@@ -426,6 +702,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = J6NT87KVZZ;
 				INFOPLIST_FILE = "斗鱼直播/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "PHICOMM.----";
@@ -507,6 +785,7 @@
 				EE8F41A61EFBEBE300DD5265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE8F41A71EFBEBE300DD5265 /* Build configuration list for PBXNativeTarget "斗鱼直播Tests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +794,7 @@
 				EE8F41A91EFBEBE300DD5265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE8F41AA1EFBEBE300DD5265 /* Build configuration list for PBXNativeTarget "斗鱼直播UITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +803,7 @@
 				EE8F41AC1EFBEBE300DD5265 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
