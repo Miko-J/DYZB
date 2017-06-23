@@ -21,6 +21,7 @@
 		EE8F41F41EFCB74900DD5265 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F31EFCB74900DD5265 /* LiveViewController.swift */; };
 		EE8F41F61EFCB76100DD5265 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F51EFCB76000DD5265 /* ProfileViewController.swift */; };
 		EE8F41F81EFCB77B00DD5265 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F71EFCB77B00DD5265 /* FollowViewController.swift */; };
+		EE8F424E1EFCE8F500DD5265 /* UIBarButtonItem-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F424D1EFCE8F500DD5265 /* UIBarButtonItem-extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		EE8F41F31EFCB74900DD5265 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		EE8F41F51EFCB76000DD5265 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EE8F41F71EFCB77B00DD5265 /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		EE8F424D1EFCE8F500DD5265 /* UIBarButtonItem-extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 		EE8F41E71EFCB4C400DD5265 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				EE8F424D1EFCE8F500DD5265 /* UIBarButtonItem-extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				EE8F41F81EFCB77B00DD5265 /* FollowViewController.swift in Sources */,
 				EE8F41F41EFCB74900DD5265 /* LiveViewController.swift in Sources */,
 				EE8F41F21EFCB72D00DD5265 /* HomeViewController.swift in Sources */,
+				EE8F424E1EFCE8F500DD5265 /* UIBarButtonItem-extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,24 +12,52 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //设置UI
+        setUpUI()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+//mark: -设置UI界面
+extension HomeViewController{
+    
+    fileprivate func setUpUI(){
+        //设置导航栏
+        setUpNavigartionBar()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    fileprivate func setUpNavigartionBar(){
+        
+        //左侧item
+        /*
+        let btn = UIButton()
+        btn.setImage(UIImage(named:"logo"), for: .normal)
+        btn.sizeToFit()
+        let leftItem = UIBarButtonItem.init(customView: btn)
+         */
+        let leftItem = UIBarButtonItem(imageName: "logo", higImageName: "", size: .zero)
+        navigationItem.leftBarButtonItem = leftItem
+        
+        /* 初级写法
+        let historyBtn = UIButton()
+        historyBtn.setImage(UIImage(named:"image_my_history"), for: .normal)
+        historyBtn.setImage(UIImage(named:"Image_my_history_click"), for: .highlighted)
+        
+        historyBtn.frame = CGRect(origin: .zero, size: btnSize)
+        let historyItem = UIBarButtonItem.init(customView: historyBtn)
+        navigationItem.rightBarButtonItems = [historyItem]
+         */
+        
+        /* 类封装
+        let historyItem = UIBarButtonItem.creatItem(imageName:"image_my_history", higImageName:"Image_my_history_click", size:btnSize)
+        */
+        let btnSize = CGSize(width: 40, height: 40)
+        let historyItem = UIBarButtonItem(imageName: "image_my_history", higImageName: "Image_my_history_click", size: btnSize)
+        
+        let searchItem = UIBarButtonItem(imageName: "btn_search", higImageName: "btn_search_clicked", size: btnSize)
+        
+        let qrCodeItem = UIBarButtonItem(imageName: "Image_scan", higImageName: "Image_scan_click", size: btnSize)
+        
+        navigationItem.rightBarButtonItems = [historyItem, searchItem, qrCodeItem]
     }
-    */
-
 }
