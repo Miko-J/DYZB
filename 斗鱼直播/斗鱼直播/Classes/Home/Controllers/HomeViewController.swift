@@ -10,12 +10,26 @@ import UIKit
 
 fileprivate let titleViewH : CGFloat = 40
 class HomeViewController: UIViewController {
-    //mark：-懒加载
-    fileprivate lazy var pageTitleView:PageTitleView = {
+    //mark：-懒加载titleView
+    fileprivate lazy var pageTitleView : PageTitleView = {
         let titleFrame = CGRect(x: 0, y:statusBarH + NavigationBarH , width: KscreenWidth, height: titleViewH)
         let titles = ["推荐", "游戏", "娱乐", "趣玩"];
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
         return titleView
+    }()
+    //mark：-懒加载contentView
+    fileprivate lazy var pageContentView : PageContentView = {
+        let tempH = statusBarH + NavigationBarH + titleViewH
+        let contentViewH = KscreenHeight - tempH
+        let contentFrame = CGRect(x: 0, y: tempH, width: KscreenWidth, height: contentViewH)
+        var childVCs = [UIViewController]()
+        for _ in 0..<4{
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor.init(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            childVCs.append(vc)
+        }
+        let contentView = PageContentView(frame: contentFrame, childVCS: childVCs, parentVC:self)
+        return contentView
     }()
     //mark: -系统回调函数
     override func viewDidLoad() {
@@ -26,6 +40,8 @@ class HomeViewController: UIViewController {
         setUpUI()
         //添加titleView
         view.addSubview(pageTitleView)
+        //添加contentView
+        view.addSubview(pageContentView)
     }
 
 }
