@@ -8,12 +8,24 @@
 
 import UIKit
 
+fileprivate let titleViewH : CGFloat = 40
 class HomeViewController: UIViewController {
-
+    //mark：-懒加载
+    fileprivate lazy var pageTitleView:PageTitleView = {
+        let titleFrame = CGRect(x: 0, y:statusBarH + NavigationBarH , width: KscreenWidth, height: titleViewH)
+        let titles = ["推荐", "游戏", "娱乐", "趣玩"];
+        let titleView = PageTitleView(frame: titleFrame, titles: titles)
+        return titleView
+    }()
+    //mark: -系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
+        //不需要调整scrollView的内边距
+        automaticallyAdjustsScrollViewInsets = false
         //设置UI
         setUpUI()
+        //添加titleView
+        view.addSubview(pageTitleView)
     }
 
 }

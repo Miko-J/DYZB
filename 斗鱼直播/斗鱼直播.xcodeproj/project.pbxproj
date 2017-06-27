@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE1E35BA1F01272B00547355 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E35B91F01272B00547355 /* PageTitleView.swift */; };
+		EE1E35BD1F012AEA00547355 /* UIBarButtonItem-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E35BC1F012AEA00547355 /* UIBarButtonItem-extension.swift */; };
+		EE1E35BF1F012B1000547355 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E35BE1F012B1000547355 /* Common.swift */; };
 		EE8F41801EFBEBE300DD5265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F417F1EFBEBE300DD5265 /* AppDelegate.swift */; };
 		EE8F41851EFBEBE300DD5265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41831EFBEBE300DD5265 /* Main.storyboard */; };
 		EE8F41871EFBEBE300DD5265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41861EFBEBE300DD5265 /* Assets.xcassets */; };
@@ -21,7 +24,6 @@
 		EE8F41F41EFCB74900DD5265 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F31EFCB74900DD5265 /* LiveViewController.swift */; };
 		EE8F41F61EFCB76100DD5265 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F51EFCB76000DD5265 /* ProfileViewController.swift */; };
 		EE8F41F81EFCB77B00DD5265 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F71EFCB77B00DD5265 /* FollowViewController.swift */; };
-		EE8F424E1EFCE8F500DD5265 /* UIBarButtonItem-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F424D1EFCE8F500DD5265 /* UIBarButtonItem-extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE1E35B91F01272B00547355 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		EE1E35BC1F012AEA00547355 /* UIBarButtonItem-extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-extension.swift"; sourceTree = "<group>"; };
+		EE1E35BE1F012B1000547355 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		EE8F417C1EFBEBE300DD5265 /* 斗鱼直播.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼直播.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F417F1EFBEBE300DD5265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE8F41841EFBEBE300DD5265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +67,6 @@
 		EE8F41F31EFCB74900DD5265 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		EE8F41F51EFCB76000DD5265 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EE8F41F71EFCB77B00DD5265 /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
-		EE8F424D1EFCE8F500DD5265 /* UIBarButtonItem-extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE1E35BB1F012AEA00547355 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EE1E35BC1F012AEA00547355 /* UIBarButtonItem-extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		EE8F41731EFBEBE300DD5265 = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +283,7 @@
 		EE8F41E11EFCB4C400DD5265 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE1E35B91F01272B00547355 /* PageTitleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,7 +332,8 @@
 		EE8F41E71EFCB4C400DD5265 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				EE8F424D1EFCE8F500DD5265 /* UIBarButtonItem-extension.swift */,
+				EE1E35BE1F012B1000547355 /* Common.swift */,
+				EE1E35BB1F012AEA00547355 /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -503,13 +517,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE1E35BA1F01272B00547355 /* PageTitleView.swift in Sources */,
 				EE8F41801EFBEBE300DD5265 /* AppDelegate.swift in Sources */,
+				EE1E35BD1F012AEA00547355 /* UIBarButtonItem-extension.swift in Sources */,
 				EE8F41EE1EFCB65900DD5265 /* MainTarBarViewController.swift in Sources */,
+				EE1E35BF1F012B1000547355 /* Common.swift in Sources */,
 				EE8F41F61EFCB76100DD5265 /* ProfileViewController.swift in Sources */,
 				EE8F41F81EFCB77B00DD5265 /* FollowViewController.swift in Sources */,
 				EE8F41F41EFCB74900DD5265 /* LiveViewController.swift in Sources */,
 				EE8F41F21EFCB72D00DD5265 /* HomeViewController.swift in Sources */,
-				EE8F424E1EFCE8F500DD5265 /* UIBarButtonItem-extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
