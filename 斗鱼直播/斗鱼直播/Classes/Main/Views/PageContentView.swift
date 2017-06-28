@@ -13,9 +13,9 @@ fileprivate var contentCellID = "contentCellID"
 class PageContentView: UIView {
 
     //mark: -懒加载collection
-    fileprivate lazy var collectionView: UICollectionView = {
+    fileprivate lazy var collectionView: UICollectionView = {[weak self] in
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = self.bounds.size
+        layout.itemSize = (self?.bounds.size)!//强制解包
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
         layout.scrollDirection = .horizontal
@@ -32,8 +32,8 @@ class PageContentView: UIView {
     }()
     
     fileprivate var childVCS : [UIViewController]
-    fileprivate var parentVC : UIViewController
-    init(frame: CGRect, childVCS: [UIViewController], parentVC:UIViewController) {
+    fileprivate weak var parentVC : UIViewController?
+    init(frame: CGRect, childVCS: [UIViewController], parentVC:UIViewController?) {
         self.childVCS = childVCS
         self.parentVC = parentVC
         super.init(frame: frame)
@@ -51,19 +51,18 @@ extension PageContentView {
     fileprivate func setUpUI() {
         //1.将所有的子控制器添加到父控制器中
         for childVC in childVCS {
-            parentVC.addChildViewController(childVC)
+            parentVC?.addChildViewController(childVC)
         }
         //添加collectionview
         addSubview(collectionView)
         collectionView.frame = bounds
     }
 }
-
+//mark: -UICollectionViewDataSource
 extension PageContentView : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return childVCS.count
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: contentCellID, for: indexPath)
@@ -77,5 +76,12 @@ extension PageContentView : UICollectionViewDataSource {
         cell.contentView.addSubview(childVC.view)
         
         return cell
+    }
+}
+//mark: -对外暴露的方法
+extension PageContentView {
+    func setCurrentIndex(currentIndex : Int) {
+        let offsetX = CGFloat(currentIndex) * collectionView.frame.size.width
+        collectionView.setContentOffset(CGPoint(x:offsetX,y:0), animated: false)
     }
 }

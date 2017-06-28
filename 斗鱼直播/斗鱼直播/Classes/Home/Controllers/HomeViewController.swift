@@ -11,14 +11,15 @@ import UIKit
 fileprivate let titleViewH : CGFloat = 40
 class HomeViewController: UIViewController {
     //mark：-懒加载titleView
-    fileprivate lazy var pageTitleView : PageTitleView = {
+    fileprivate lazy var pageTitleView : PageTitleView = {[weak self] in
         let titleFrame = CGRect(x: 0, y:statusBarH + NavigationBarH , width: KscreenWidth, height: titleViewH)
         let titles = ["推荐", "游戏", "娱乐", "趣玩"];
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
+        titleView.delegate = self
         return titleView
     }()
     //mark：-懒加载contentView
-    fileprivate lazy var pageContentView : PageContentView = {
+    fileprivate lazy var pageContentView : PageContentView = {[weak self] in
         let tempH = statusBarH + NavigationBarH + titleViewH
         let contentViewH = KscreenHeight - tempH
         let contentFrame = CGRect(x: 0, y: tempH, width: KscreenWidth, height: contentViewH)
@@ -44,6 +45,13 @@ class HomeViewController: UIViewController {
         view.addSubview(pageContentView)
     }
 
+}
+
+//mark: -遵循PageTitleViewDelegate
+extension HomeViewController : PageTitleViewDelegate{
+    func pageTitleView(titleView: PageTitleView, selecIndex index: Int) {
+        pageContentView.setCurrentIndex(currentIndex: index)
+    }
 }
 
 //mark: -设置UI界面
