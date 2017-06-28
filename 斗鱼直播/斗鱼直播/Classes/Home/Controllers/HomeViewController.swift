@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
             childVCs.append(vc)
         }
         let contentView = PageContentView(frame: contentFrame, childVCS: childVCs, parentVC:self)
+        contentView.delegate = self
         return contentView
     }()
     //mark: -系统回调函数
@@ -54,6 +55,12 @@ extension HomeViewController : PageTitleViewDelegate{
     }
 }
 
+//mark: -遵循
+extension HomeViewController : PageContentViewDelegate{
+    func pageContentView(progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+}
 //mark: -设置UI界面
 extension HomeViewController{
     

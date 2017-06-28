@@ -13,10 +13,14 @@ protocol PageTitleViewDelegate : class {//协议只能被类遵守
 }
 
 fileprivate let KscrollLineH : CGFloat = 2
+//mark：定义颜色元组
+fileprivate let KnormalColor : (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
+fileprivate let KselectorColor: (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
+
 class PageTitleView: UIView {
     
+    //mark：-当前lable的索引
     fileprivate var currentIndex : Int = 0
-    
     //mark： -设置代理
     weak var delegate : PageTitleViewDelegate?
     //mark: -懒加载数组
@@ -32,7 +36,7 @@ class PageTitleView: UIView {
     //mark: -懒加载scrollLine
     fileprivate lazy var scrollLine: UIView = {
         let scrollLine = UIView()
-        scrollLine.backgroundColor = UIColor.orange
+        scrollLine.backgroundColor = UIColor(r: KselectorColor.0, g: KselectorColor.1, b: KselectorColor.2)
         return scrollLine
     }()
     //mark: -定义属性
@@ -76,7 +80,7 @@ extension PageTitleView{
             lable.font = UIFont.systemFont(ofSize: 16)
             lable.tag = index
             lable.textAlignment = .center
-            lable.textColor = UIColor.black
+            lable.textColor = UIColor(r: KnormalColor.0, g: KnormalColor.1, b: KnormalColor.2)
             
             let lableX = lableW * CGFloat(index)
             lable.frame = CGRect(x: lableX, y: lableY, width: lableW, height: lableH)
@@ -130,6 +134,26 @@ extension PageTitleView{
         
         //通知代理
         delegate?.pageTitleView(titleView: self, selecIndex: currentIndex)
+    }
+}
+
+//mark: -对外暴露的方法
+extension PageTitleView{
+    func setTitleWithProgress(progress: CGFloat, sourceIndex: Int, targetIndex: Int){
+        print("%f","%d","%d",progress,sourceIndex,targetIndex)
+        //1.获取lable
+         let currentLable = titleLableArr[sourceIndex]
+         let targetLable = titleLableArr[targetIndex]
+        //2.处理滑块的逻辑
+        let moveX = targetLable.frame.origin.x - currentLable.frame.origin.x
+        let moveProgressX = moveX * progress
+        scrollLine.frame.origin.x = currentLable.frame.origin.x + moveProgressX;
+        //取出颜色变化范围
+        let colorDelta = (KselectorColor.0 - KnormalColor.0,KselectorColor.1 - KnormalColor.1,KselectorColor.2 - KnormalColor.2)
+        currentLable.textColor = UIColor(r: KselectorColor.0 - colorDelta.0 * progress, g: KselectorColor.1 - colorDelta.1 * progress, b: KselectorColor.2 - colorDelta.2 * progress)
+        targetLable.textColor = UIColor(r: KnormalColor.0 + colorDelta.0 * progress, g: KnormalColor.1 + colorDelta.1 * progress, b: KnormalColor.2 + colorDelta.2 * progress)
+        //更新索引
+        currentIndex = targetIndex
     }
 }
 
