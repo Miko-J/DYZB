@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F78C99F98725EDCB1D4E363 /* Pods_____.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4FB8C24AE9A62828A14C8E /* Pods_____.framework */; };
 		EE12B3B71F026CD800C0E02B /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE12B3B61F026CD800C0E02B /* PageContentView.swift */; };
 		EE12B3B91F02700700C0E02B /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE12B3B81F02700700C0E02B /* UIColor-Extension.swift */; };
+		EE132DE41F04EEEC0045B4DA /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE132DE31F04EEEC0045B4DA /* NetworkTools.swift */; };
 		EE1D284E1F04A46500F40A70 /* RecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D284D1F04A46500F40A70 /* RecommendController.swift */; };
 		EE1E35BA1F01272B00547355 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E35B91F01272B00547355 /* PageTitleView.swift */; };
 		EE1E35BD1F012AEA00547355 /* UIBarButtonItem-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E35BC1F012AEA00547355 /* UIBarButtonItem-extension.swift */; };
@@ -17,6 +19,8 @@
 		EE39E54E1F04CD8100819F47 /* CollectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE39E54C1F04CD8100819F47 /* CollectionHeadView.xib */; };
 		EE39E5511F04CFC700819F47 /* KCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39E54F1F04CFC700819F47 /* KCollectionNormalCell.swift */; };
 		EE39E5521F04CFC700819F47 /* KCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE39E5501F04CFC700819F47 /* KCollectionNormalCell.xib */; };
+		EE39E5551F04D85A00819F47 /* KCollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39E5531F04D85A00819F47 /* KCollectionPrettyCell.swift */; };
+		EE39E5561F04D85A00819F47 /* KCollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE39E5541F04D85A00819F47 /* KCollectionPrettyCell.xib */; };
 		EE8F41801EFBEBE300DD5265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F417F1EFBEBE300DD5265 /* AppDelegate.swift */; };
 		EE8F41851EFBEBE300DD5265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41831EFBEBE300DD5265 /* Main.storyboard */; };
 		EE8F41871EFBEBE300DD5265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41861EFBEBE300DD5265 /* Assets.xcassets */; };
@@ -51,8 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E0B8837A1132BC1732C392D /* Pods-斗鱼直播.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼直播.release.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼直播/Pods-斗鱼直播.release.xcconfig"; sourceTree = "<group>"; };
+		8C4FB8C24AE9A62828A14C8E /* Pods_____.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_____.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9086A9F38AA14F62B1C615C7 /* Pods-斗鱼直播.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-斗鱼直播.debug.xcconfig"; path = "Pods/Target Support Files/Pods-斗鱼直播/Pods-斗鱼直播.debug.xcconfig"; sourceTree = "<group>"; };
 		EE12B3B61F026CD800C0E02B /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		EE12B3B81F02700700C0E02B /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		EE132DE31F04EEEC0045B4DA /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		EE1D284D1F04A46500F40A70 /* RecommendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendController.swift; sourceTree = "<group>"; };
 		EE1E35B91F01272B00547355 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		EE1E35BC1F012AEA00547355 /* UIBarButtonItem-extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-extension.swift"; sourceTree = "<group>"; };
@@ -61,6 +69,8 @@
 		EE39E54C1F04CD8100819F47 /* CollectionHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeadView.xib; sourceTree = "<group>"; };
 		EE39E54F1F04CFC700819F47 /* KCollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCollectionNormalCell.swift; sourceTree = "<group>"; };
 		EE39E5501F04CFC700819F47 /* KCollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCollectionNormalCell.xib; sourceTree = "<group>"; };
+		EE39E5531F04D85A00819F47 /* KCollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCollectionPrettyCell.swift; sourceTree = "<group>"; };
+		EE39E5541F04D85A00819F47 /* KCollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCollectionPrettyCell.xib; sourceTree = "<group>"; };
 		EE8F417C1EFBEBE300DD5265 /* 斗鱼直播.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼直播.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F417F1EFBEBE300DD5265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE8F41841EFBEBE300DD5265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F78C99F98725EDCB1D4E363 /* Pods_____.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +119,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EA3B701935522300831F5F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9086A9F38AA14F62B1C615C7 /* Pods-斗鱼直播.debug.xcconfig */,
+				5E0B8837A1132BC1732C392D /* Pods-斗鱼直播.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E83214B7AD8322E230E9F4AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C4FB8C24AE9A62828A14C8E /* Pods_____.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE1E35BB1F012AEA00547355 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +152,8 @@
 				EE8F41931EFBEBE300DD5265 /* 斗鱼直播Tests */,
 				EE8F419E1EFBEBE300DD5265 /* 斗鱼直播UITests */,
 				EE8F417D1EFBEBE300DD5265 /* Products */,
+				0EA3B701935522300831F5F9 /* Pods */,
+				E83214B7AD8322E230E9F4AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -305,6 +335,8 @@
 				EE12B3B61F026CD800C0E02B /* PageContentView.swift */,
 				EE39E54F1F04CFC700819F47 /* KCollectionNormalCell.swift */,
 				EE39E5501F04CFC700819F47 /* KCollectionNormalCell.xib */,
+				EE39E5531F04D85A00819F47 /* KCollectionPrettyCell.swift */,
+				EE39E5541F04D85A00819F47 /* KCollectionPrettyCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				EE1E35BE1F012B1000547355 /* Common.swift */,
+				EE132DE31F04EEEC0045B4DA /* NetworkTools.swift */,
 				EE1E35BB1F012AEA00547355 /* Extension */,
 			);
 			path = Tools;
@@ -407,9 +440,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE8F41A41EFBEBE300DD5265 /* Build configuration list for PBXNativeTarget "斗鱼直播" */;
 			buildPhases = (
+				FDB94B14BCEC10D94CF1A2B5 /* [CP] Check Pods Manifest.lock */,
 				EE8F41781EFBEBE300DD5265 /* Sources */,
 				EE8F41791EFBEBE300DD5265 /* Frameworks */,
 				EE8F417A1EFBEBE300DD5265 /* Resources */,
+				1960F1D314566E6F6B72D845 /* [CP] Embed Pods Frameworks */,
+				D00F742427AE3A7A9CB9A882 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -511,6 +547,7 @@
 				EE8F41871EFBEBE300DD5265 /* Assets.xcassets in Resources */,
 				EE8F41851EFBEBE300DD5265 /* Main.storyboard in Resources */,
 				EE39E5521F04CFC700819F47 /* KCollectionNormalCell.xib in Resources */,
+				EE39E5561F04D85A00819F47 /* KCollectionPrettyCell.xib in Resources */,
 				EE8F41C11EFCB38100DD5265 /* Live.storyboard in Resources */,
 				EE8F41BE1EFCB34000DD5265 /* Home.storyboard in Resources */,
 				EE8F41C71EFCB3C100DD5265 /* Profile.storyboard in Resources */,
@@ -535,11 +572,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1960F1D314566E6F6B72D845 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼直播/Pods-斗鱼直播-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼直播/Pods-斗鱼直播-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D00F742427AE3A7A9CB9A882 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼直播/Pods-斗鱼直播-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDB94B14BCEC10D94CF1A2B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-斗鱼直播-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EE8F41781EFBEBE300DD5265 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE39E5551F04D85A00819F47 /* KCollectionPrettyCell.swift in Sources */,
 				EE1E35BA1F01272B00547355 /* PageTitleView.swift in Sources */,
 				EE8F41801EFBEBE300DD5265 /* AppDelegate.swift in Sources */,
 				EE1E35BD1F012AEA00547355 /* UIBarButtonItem-extension.swift in Sources */,
@@ -547,6 +639,7 @@
 				EE8F41EE1EFCB65900DD5265 /* MainTarBarViewController.swift in Sources */,
 				EE1E35BF1F012B1000547355 /* Common.swift in Sources */,
 				EE1D284E1F04A46500F40A70 /* RecommendController.swift in Sources */,
+				EE132DE41F04EEEC0045B4DA /* NetworkTools.swift in Sources */,
 				EE8F41F61EFCB76100DD5265 /* ProfileViewController.swift in Sources */,
 				EE8F41F81EFCB77B00DD5265 /* FollowViewController.swift in Sources */,
 				EE8F41F41EFCB74900DD5265 /* LiveViewController.swift in Sources */,
@@ -734,6 +827,7 @@
 		};
 		EE8F41A51EFBEBE300DD5265 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9086A9F38AA14F62B1C615C7 /* Pods-斗鱼直播.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -743,11 +837,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "PHICOMM.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
 		EE8F41A61EFBEBE300DD5265 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E0B8837A1132BC1732C392D /* Pods-斗鱼直播.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -757,6 +853,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "PHICOMM.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

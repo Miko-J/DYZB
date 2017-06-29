@@ -10,8 +10,10 @@ import UIKit
 
 fileprivate let KitemMargin : CGFloat = 10
 fileprivate let KitemW = (KscreenWidth - KitemMargin * 3) / 2
-fileprivate let KitemH = KitemW * 3 / 4
+fileprivate let KitemNormalH = KitemW * 3 / 4
+fileprivate let KitemPrettyH = KitemW * 4 / 3
 fileprivate let KnormalCellID = "KnormalCellID"
+fileprivate let KPrettyCellID = "KPrettyCellID"
 fileprivate let KHeadCellID = "KHeadCellID"
 fileprivate let KHeadH : CGFloat = 50
 class RecommendController: UIViewController {
@@ -20,7 +22,7 @@ class RecommendController: UIViewController {
     fileprivate lazy var collectionView: UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
         //print("%d","%d","%d",KscreenWidth,KitemW,KitemH)
-        layout.itemSize = CGSize(width: KitemW, height: KitemH)
+        layout.itemSize = CGSize(width: KitemW, height: KitemNormalH)
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = KitemMargin
         layout.headerReferenceSize = CGSize(width: KscreenWidth, height: KHeadH)
@@ -28,9 +30,11 @@ class RecommendController: UIViewController {
         
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView.dataSource = self
+        collectionView.delegate = self
         //随着父控件的变化而变化
         collectionView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         collectionView.register(UINib(nibName: "KCollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: KnormalCellID)
+        collectionView.register(UINib(nibName: "KCollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: KPrettyCellID)
 //        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: KnormalCellID)
         collectionView.register(UINib(nibName: "CollectionHeadView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: KHeadCellID)
 //        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: KHeadCellID)
@@ -51,7 +55,7 @@ extension RecommendController {
     }
 }
 //mark: -遵守
-extension RecommendController : UICollectionViewDataSource{
+extension RecommendController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 12
     }
@@ -64,13 +68,25 @@ extension RecommendController : UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KnormalCellID, for: indexPath)
+        var cell : UICollectionViewCell!
+        if indexPath.section == 1 {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: KPrettyCellID, for: indexPath)
+        }else{
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: KnormalCellID, for: indexPath)
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: KHeadCellID, for: indexPath)
         return headView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        if indexPath.section == 1 {
+            return CGSize(width: KitemW, height: KitemPrettyH)
+        }
+        return CGSize(width: KitemW, height: KitemNormalH)
     }
 }
 

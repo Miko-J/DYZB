@@ -1,0 +1,6 @@
+framework module Pods_____ {
+  umbrella header "Pods-斗鱼直播-umbrella.h"
+
+  export *
+  module * { export * }
+}
