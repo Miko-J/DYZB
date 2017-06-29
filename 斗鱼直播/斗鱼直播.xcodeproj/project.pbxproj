@@ -9,9 +9,14 @@
 /* Begin PBXBuildFile section */
 		EE12B3B71F026CD800C0E02B /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE12B3B61F026CD800C0E02B /* PageContentView.swift */; };
 		EE12B3B91F02700700C0E02B /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE12B3B81F02700700C0E02B /* UIColor-Extension.swift */; };
+		EE1D284E1F04A46500F40A70 /* RecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D284D1F04A46500F40A70 /* RecommendController.swift */; };
 		EE1E35BA1F01272B00547355 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E35B91F01272B00547355 /* PageTitleView.swift */; };
 		EE1E35BD1F012AEA00547355 /* UIBarButtonItem-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E35BC1F012AEA00547355 /* UIBarButtonItem-extension.swift */; };
 		EE1E35BF1F012B1000547355 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E35BE1F012B1000547355 /* Common.swift */; };
+		EE39E54D1F04CD8100819F47 /* CollectionHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39E54B1F04CD8100819F47 /* CollectionHeadView.swift */; };
+		EE39E54E1F04CD8100819F47 /* CollectionHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE39E54C1F04CD8100819F47 /* CollectionHeadView.xib */; };
+		EE39E5511F04CFC700819F47 /* KCollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE39E54F1F04CFC700819F47 /* KCollectionNormalCell.swift */; };
+		EE39E5521F04CFC700819F47 /* KCollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE39E5501F04CFC700819F47 /* KCollectionNormalCell.xib */; };
 		EE8F41801EFBEBE300DD5265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F417F1EFBEBE300DD5265 /* AppDelegate.swift */; };
 		EE8F41851EFBEBE300DD5265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41831EFBEBE300DD5265 /* Main.storyboard */; };
 		EE8F41871EFBEBE300DD5265 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE8F41861EFBEBE300DD5265 /* Assets.xcassets */; };
@@ -48,9 +53,14 @@
 /* Begin PBXFileReference section */
 		EE12B3B61F026CD800C0E02B /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		EE12B3B81F02700700C0E02B /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		EE1D284D1F04A46500F40A70 /* RecommendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendController.swift; sourceTree = "<group>"; };
 		EE1E35B91F01272B00547355 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		EE1E35BC1F012AEA00547355 /* UIBarButtonItem-extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-extension.swift"; sourceTree = "<group>"; };
 		EE1E35BE1F012B1000547355 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		EE39E54B1F04CD8100819F47 /* CollectionHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionHeadView.swift; sourceTree = "<group>"; };
+		EE39E54C1F04CD8100819F47 /* CollectionHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeadView.xib; sourceTree = "<group>"; };
+		EE39E54F1F04CFC700819F47 /* KCollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCollectionNormalCell.swift; sourceTree = "<group>"; };
+		EE39E5501F04CFC700819F47 /* KCollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCollectionNormalCell.xib; sourceTree = "<group>"; };
 		EE8F417C1EFBEBE300DD5265 /* 斗鱼直播.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "斗鱼直播.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8F417F1EFBEBE300DD5265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE8F41841EFBEBE300DD5265 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +195,7 @@
 			children = (
 				EE8F41BC1EFCB34000DD5265 /* Home.storyboard */,
 				EE8F41F11EFCB72D00DD5265 /* HomeViewController.swift */,
+				EE1D284D1F04A46500F40A70 /* RecommendController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,6 +217,8 @@
 		EE8F41D71EFCB4C400DD5265 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE39E54B1F04CD8100819F47 /* CollectionHeadView.swift */,
+				EE39E54C1F04CD8100819F47 /* CollectionHeadView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,6 +303,8 @@
 			children = (
 				EE1E35B91F01272B00547355 /* PageTitleView.swift */,
 				EE12B3B61F026CD800C0E02B /* PageContentView.swift */,
+				EE39E54F1F04CFC700819F47 /* KCollectionNormalCell.swift */,
+				EE39E5501F04CFC700819F47 /* KCollectionNormalCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -495,9 +510,11 @@
 			files = (
 				EE8F41871EFBEBE300DD5265 /* Assets.xcassets in Resources */,
 				EE8F41851EFBEBE300DD5265 /* Main.storyboard in Resources */,
+				EE39E5521F04CFC700819F47 /* KCollectionNormalCell.xib in Resources */,
 				EE8F41C11EFCB38100DD5265 /* Live.storyboard in Resources */,
 				EE8F41BE1EFCB34000DD5265 /* Home.storyboard in Resources */,
 				EE8F41C71EFCB3C100DD5265 /* Profile.storyboard in Resources */,
+				EE39E54E1F04CD8100819F47 /* CollectionHeadView.xib in Resources */,
 				EE8F41C41EFCB3AA00DD5265 /* Follow.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,9 +546,12 @@
 				EE12B3B71F026CD800C0E02B /* PageContentView.swift in Sources */,
 				EE8F41EE1EFCB65900DD5265 /* MainTarBarViewController.swift in Sources */,
 				EE1E35BF1F012B1000547355 /* Common.swift in Sources */,
+				EE1D284E1F04A46500F40A70 /* RecommendController.swift in Sources */,
 				EE8F41F61EFCB76100DD5265 /* ProfileViewController.swift in Sources */,
 				EE8F41F81EFCB77B00DD5265 /* FollowViewController.swift in Sources */,
 				EE8F41F41EFCB74900DD5265 /* LiveViewController.swift in Sources */,
+				EE39E5511F04CFC700819F47 /* KCollectionNormalCell.swift in Sources */,
+				EE39E54D1F04CD8100819F47 /* CollectionHeadView.swift in Sources */,
 				EE8F41F21EFCB72D00DD5265 /* HomeViewController.swift in Sources */,
 				EE12B3B91F02700700C0E02B /* UIColor-Extension.swift in Sources */,
 			);

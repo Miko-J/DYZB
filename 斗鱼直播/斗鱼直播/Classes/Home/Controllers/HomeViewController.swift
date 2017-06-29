@@ -21,10 +21,12 @@ class HomeViewController: UIViewController {
     //mark：-懒加载contentView
     fileprivate lazy var pageContentView : PageContentView = {[weak self] in
         let tempH = statusBarH + NavigationBarH + titleViewH
-        let contentViewH = KscreenHeight - tempH
+        let contentViewH = KscreenHeight - tempH - tabBarH
         let contentFrame = CGRect(x: 0, y: tempH, width: KscreenWidth, height: contentViewH)
         var childVCs = [UIViewController]()
-        for _ in 0..<4{
+        //添加推荐控制器
+        childVCs.append(RecommendController())
+        for _ in 0..<3{
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor.init(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVCs.append(vc)
