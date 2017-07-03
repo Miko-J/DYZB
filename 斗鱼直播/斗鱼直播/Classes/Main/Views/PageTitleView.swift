@@ -118,6 +118,9 @@ extension PageTitleView{
         
         guard let currentLable = tapGes.view as? UILabel else {return}
         
+        //当重复点击一个title返回
+        if currentLable.tag == currentIndex { return }
+        
         let oldLable  = titleLableArr[currentIndex]
         
         //改变文字颜色

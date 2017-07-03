@@ -11,6 +11,11 @@
 		EE12B3B71F026CD800C0E02B /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE12B3B61F026CD800C0E02B /* PageContentView.swift */; };
 		EE12B3B91F02700700C0E02B /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE12B3B81F02700700C0E02B /* UIColor-Extension.swift */; };
 		EE132DE41F04EEEC0045B4DA /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE132DE31F04EEEC0045B4DA /* NetworkTools.swift */; };
+		EE132DEB1F0517E00045B4DA /* RcommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE132DEA1F0517E00045B4DA /* RcommendViewModel.swift */; };
+		EE132E691F05DBFF0045B4DA /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE132E681F05DBFF0045B4DA /* AnchorGroup.swift */; };
+		EE132E6B1F05DCD60045B4DA /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE132E6A1F05DCD60045B4DA /* AnchorModel.swift */; };
+		EE132E6D1F05DF870045B4DA /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE132E6C1F05DF870045B4DA /* NSDate-Extension.swift */; };
+		EE132E721F09F1860045B4DA /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE132E711F09F1860045B4DA /* CollectionBaseCell.swift */; };
 		EE1D284E1F04A46500F40A70 /* RecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D284D1F04A46500F40A70 /* RecommendController.swift */; };
 		EE1E35BA1F01272B00547355 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E35B91F01272B00547355 /* PageTitleView.swift */; };
 		EE1E35BD1F012AEA00547355 /* UIBarButtonItem-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1E35BC1F012AEA00547355 /* UIBarButtonItem-extension.swift */; };
@@ -61,6 +66,11 @@
 		EE12B3B61F026CD800C0E02B /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		EE12B3B81F02700700C0E02B /* UIColor-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		EE132DE31F04EEEC0045B4DA /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		EE132DEA1F0517E00045B4DA /* RcommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RcommendViewModel.swift; sourceTree = "<group>"; };
+		EE132E681F05DBFF0045B4DA /* AnchorGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		EE132E6A1F05DCD60045B4DA /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
+		EE132E6C1F05DF870045B4DA /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		EE132E711F09F1860045B4DA /* CollectionBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
 		EE1D284D1F04A46500F40A70 /* RecommendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendController.swift; sourceTree = "<group>"; };
 		EE1E35B91F01272B00547355 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		EE1E35BC1F012AEA00547355 /* UIBarButtonItem-extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-extension.swift"; sourceTree = "<group>"; };
@@ -136,11 +146,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EE132DE91F0517B60045B4DA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EE132DEA1F0517E00045B4DA /* RcommendViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		EE1E35BB1F012AEA00547355 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				EE1E35BC1F012AEA00547355 /* UIBarButtonItem-extension.swift */,
 				EE12B3B81F02700700C0E02B /* UIColor-Extension.swift */,
+				EE132E6C1F05DF870045B4DA /* NSDate-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -212,9 +231,9 @@
 		EE8F41D31EFCB4C400DD5265 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EE132DE91F0517B60045B4DA /* ViewModels */,
 				EE8F41D41EFCB4C400DD5265 /* Controllers */,
 				EE8F41D51EFCB4C400DD5265 /* Models */,
-				EE8F41D61EFCB4C400DD5265 /* ViewModels */,
 				EE8F41D71EFCB4C400DD5265 /* Views */,
 			);
 			path = Home;
@@ -235,13 +254,6 @@
 			children = (
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		EE8F41D61EFCB4C400DD5265 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		EE8F41D71EFCB4C400DD5265 /* Views */ = {
@@ -317,6 +329,8 @@
 		EE8F41DF1EFCB4C400DD5265 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE132E681F05DBFF0045B4DA /* AnchorGroup.swift */,
+				EE132E6A1F05DCD60045B4DA /* AnchorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,6 +351,7 @@
 				EE39E5501F04CFC700819F47 /* KCollectionNormalCell.xib */,
 				EE39E5531F04D85A00819F47 /* KCollectionPrettyCell.swift */,
 				EE39E5541F04D85A00819F47 /* KCollectionPrettyCell.xib */,
+				EE132E711F09F1860045B4DA /* CollectionBaseCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -581,10 +596,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-斗鱼直播/Pods-斗鱼直播-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -633,12 +650,17 @@
 			files = (
 				EE39E5551F04D85A00819F47 /* KCollectionPrettyCell.swift in Sources */,
 				EE1E35BA1F01272B00547355 /* PageTitleView.swift in Sources */,
+				EE132E6B1F05DCD60045B4DA /* AnchorModel.swift in Sources */,
 				EE8F41801EFBEBE300DD5265 /* AppDelegate.swift in Sources */,
 				EE1E35BD1F012AEA00547355 /* UIBarButtonItem-extension.swift in Sources */,
 				EE12B3B71F026CD800C0E02B /* PageContentView.swift in Sources */,
+				EE132DEB1F0517E00045B4DA /* RcommendViewModel.swift in Sources */,
+				EE132E691F05DBFF0045B4DA /* AnchorGroup.swift in Sources */,
 				EE8F41EE1EFCB65900DD5265 /* MainTarBarViewController.swift in Sources */,
 				EE1E35BF1F012B1000547355 /* Common.swift in Sources */,
+				EE132E6D1F05DF870045B4DA /* NSDate-Extension.swift in Sources */,
 				EE1D284E1F04A46500F40A70 /* RecommendController.swift in Sources */,
+				EE132E721F09F1860045B4DA /* CollectionBaseCell.swift in Sources */,
 				EE132DE41F04EEEC0045B4DA /* NetworkTools.swift in Sources */,
 				EE8F41F61EFCB76100DD5265 /* ProfileViewController.swift in Sources */,
 				EE8F41F81EFCB77B00DD5265 /* FollowViewController.swift in Sources */,

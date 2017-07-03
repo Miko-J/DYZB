@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CollectionHeadView" customModule="斗鱼直播" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAW-4d-P5E">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAW-4d-P5E" customClass="CollectionHeadView" customModule="斗鱼直播" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="10"/>
                     <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -58,6 +58,10 @@
                 <constraint firstAttribute="trailing" secondItem="IAW-4d-P5E" secondAttribute="trailing" id="xHA-ae-Smd"/>
                 <constraint firstAttribute="bottom" secondItem="DvG-y3-18O" secondAttribute="bottom" constant="5" id="xeU-VO-e6C"/>
             </constraints>
+            <connections>
+                <outlet property="iconImageVeiw" destination="mUc-NW-N0G" id="izJ-lZ-nnf"/>
+                <outlet property="titleLable" destination="gHq-Xw-dZD" id="hy6-XS-rUE"/>
+            </connections>
         </collectionReusableView>
     </objects>
     <resources>

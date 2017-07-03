@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Kingfisher
+class KCollectionPrettyCell: CollectionBaseCell {
+    
 
-class KCollectionPrettyCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var cityBtn: UIButton!
+    
+    override var anchor : AnchorModel? {//override重写父类
+        didSet{
+            //将属性传给父类
+            super.anchor = anchor
+            
+            cityBtn.setTitle(anchor?.anchor_city, for: .normal)
+        }
     }
 
 }

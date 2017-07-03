@@ -5,6 +5,7 @@
 
 target '斗鱼直播' do
 
-pod 'Alamofire', '~> 4.4.0'  
+pod 'Alamofire', '~> 4.4.0'
+pod 'Kingfisher', '~> 3.10.2'  
 
 end

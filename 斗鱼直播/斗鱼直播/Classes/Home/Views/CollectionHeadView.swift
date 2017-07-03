@@ -9,10 +9,16 @@
 import UIKit
 
 class CollectionHeadView: UICollectionReusableView {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
+    @IBOutlet weak var iconImageVeiw: UIImageView!
+    
+    @IBOutlet weak var titleLable: UILabel!
+    
+    //定义模型属性
+    var group : AnchorGroup? {
+        didSet{
+            titleLable.text = group?.tag_name
+            iconImageVeiw.image = UIImage(named: group?.icon_name ?? "home_header_normal") //??代表前面有没有值
+        }
+    }
 }
