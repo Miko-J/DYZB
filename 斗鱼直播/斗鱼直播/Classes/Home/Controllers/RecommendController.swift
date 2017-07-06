@@ -13,6 +13,7 @@ fileprivate let KitemW = (KscreenWidth - KitemMargin * 3) / 2
 fileprivate let KitemNormalH = KitemW * 3 / 4
 fileprivate let KitemPrettyH = KitemW * 4 / 3
 fileprivate let KcycleViewH = KscreenWidth * 3 / 8
+fileprivate let KGameViewH : CGFloat = 90
 fileprivate let KnormalCellID = "KnormalCellID"
 fileprivate let KPrettyCellID = "KPrettyCellID"
 fileprivate let KHeadCellID = "KHeadCellID"
@@ -23,8 +24,15 @@ class RecommendController: UIViewController {
     //mark: -recommendCycleView
     fileprivate lazy var recommendCycleView : RecommendCycleView = {
         let cycle = RecommendCycleView.recommendCycleView()
-        cycle.frame = CGRect(x: 0, y: -KcycleViewH, width: KscreenWidth, height: KcycleViewH)
+        cycle.frame = CGRect(x: 0, y: -(KcycleViewH + KGameViewH), width: KscreenWidth, height: KcycleViewH)
         return cycle
+    }()
+    
+    //mark: -KGameView
+    fileprivate lazy var kGameView : KGameView = {
+        let gameView = KGameView.kGameView()
+        gameView.frame = CGRect(x: 0, y: -KGameViewH, width: KscreenWidth, height: KGameViewH)
+        return gameView
     }()
     
     //mark：-viewModel
@@ -69,8 +77,11 @@ extension RecommendController {
         view.addSubview(collectionView)
         //添加recommendCycleView
         collectionView.addSubview(recommendCycleView)
+        
+        //添加kgameView
+        collectionView.addSubview(kGameView)
         //设置内边距
-        collectionView.contentInset = UIEdgeInsetsMake(KcycleViewH, 0, 0, 0)
+        collectionView.contentInset = UIEdgeInsetsMake(KcycleViewH+KGameViewH, 0, 0, 0)
     }
 }
 //mark: -发送网络请求

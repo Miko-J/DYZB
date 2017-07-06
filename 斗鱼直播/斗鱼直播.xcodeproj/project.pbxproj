@@ -45,6 +45,8 @@
 		EE8F41F81EFCB77B00DD5265 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F71EFCB77B00DD5265 /* FollowViewController.swift */; };
 		EEE577461F0E4A1E00D0F558 /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE577441F0E4A1E00D0F558 /* CollectionCycleCell.swift */; };
 		EEE577471F0E4A1E00D0F558 /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE577451F0E4A1E00D0F558 /* CollectionCycleCell.xib */; };
+		EEE577491F0E5BF400D0F558 /* KGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE577481F0E5BF400D0F558 /* KGameView.swift */; };
+		EEE5774B1F0E5C0A00D0F558 /* KGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE5774A1F0E5C0A00D0F558 /* KGameView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		EE8F41F71EFCB77B00DD5265 /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 		EEE577441F0E4A1E00D0F558 /* CollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		EEE577451F0E4A1E00D0F558 /* CollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
+		EEE577481F0E5BF400D0F558 /* KGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGameView.swift; sourceTree = "<group>"; };
+		EEE5774A1F0E5C0A00D0F558 /* KGameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KGameView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +280,8 @@
 				EE132E7C1F0A418B0045B4DA /* RecommendCycleView.xib */,
 				EEE577441F0E4A1E00D0F558 /* CollectionCycleCell.swift */,
 				EEE577451F0E4A1E00D0F558 /* CollectionCycleCell.xib */,
+				EEE577481F0E5BF400D0F558 /* KGameView.swift */,
+				EEE5774A1F0E5C0A00D0F558 /* KGameView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -576,6 +582,7 @@
 			files = (
 				EE132E7D1F0A418B0045B4DA /* RecommendCycleView.xib in Resources */,
 				EE8F41871EFBEBE300DD5265 /* Assets.xcassets in Resources */,
+				EEE5774B1F0E5C0A00D0F558 /* KGameView.xib in Resources */,
 				EE8F41851EFBEBE300DD5265 /* Main.storyboard in Resources */,
 				EE39E5521F04CFC700819F47 /* KCollectionNormalCell.xib in Resources */,
 				EEE577471F0E4A1E00D0F558 /* CollectionCycleCell.xib in Resources */,
@@ -685,6 +692,7 @@
 				EE8F41F41EFCB74900DD5265 /* LiveViewController.swift in Sources */,
 				EE39E5511F04CFC700819F47 /* KCollectionNormalCell.swift in Sources */,
 				EE39E54D1F04CD8100819F47 /* CollectionHeadView.swift in Sources */,
+				EEE577491F0E5BF400D0F558 /* KGameView.swift in Sources */,
 				EE8F41F21EFCB72D00DD5265 /* HomeViewController.swift in Sources */,
 				EE132E7B1F0A41710045B4DA /* RecommendCycleView.swift in Sources */,
 				EE132E7F1F0A57780045B4DA /* CycleModel.swift in Sources */,
