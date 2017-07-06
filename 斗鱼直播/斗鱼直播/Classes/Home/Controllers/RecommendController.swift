@@ -12,11 +12,20 @@ fileprivate let KitemMargin : CGFloat = 10
 fileprivate let KitemW = (KscreenWidth - KitemMargin * 3) / 2
 fileprivate let KitemNormalH = KitemW * 3 / 4
 fileprivate let KitemPrettyH = KitemW * 4 / 3
+fileprivate let KcycleViewH = KscreenWidth * 3 / 8
 fileprivate let KnormalCellID = "KnormalCellID"
 fileprivate let KPrettyCellID = "KPrettyCellID"
 fileprivate let KHeadCellID = "KHeadCellID"
 fileprivate let KHeadH : CGFloat = 50
 class RecommendController: UIViewController {
+    
+    
+    //mark: -recommendCycleView
+    fileprivate lazy var recommendCycleView : RecommendCycleView = {
+        let cycle = RecommendCycleView.recommendCycleView()
+        cycle.frame = CGRect(x: 0, y: -KcycleViewH, width: KscreenWidth, height: KcycleViewH)
+        return cycle
+    }()
     
     //mark：-viewModel
     fileprivate lazy var recommendVM : RcommendViewModel = RcommendViewModel()
@@ -58,14 +67,22 @@ class RecommendController: UIViewController {
 extension RecommendController {
     fileprivate func setUpUI() {
         view.addSubview(collectionView)
+        //添加recommendCycleView
+        collectionView.addSubview(recommendCycleView)
+        //设置内边距
+        collectionView.contentInset = UIEdgeInsetsMake(KcycleViewH, 0, 0, 0)
     }
 }
 //mark: -发送网络请求
 extension RecommendController {
     fileprivate func loadRequest() {
-        //获取网络请求数据
+        //获取推荐网络请求数据
         recommendVM.requesetData {
             self.collectionView.reloadData()
+        }
+        //获取轮播图的请求数据
+        recommendVM.requestCycleData {
+            self.recommendCycleView.cycleModels = self.recommendVM.cycleModel
         }
     }
 }

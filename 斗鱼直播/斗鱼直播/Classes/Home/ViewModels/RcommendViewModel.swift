@@ -11,10 +11,12 @@ import UIKit
 class RcommendViewModel {
     //mark: -主播模型数组
     lazy var anchorsGroup : [AnchorGroup] = [AnchorGroup]()
-    
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     //颜值
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
+    
+    //轮播数据
+    lazy var cycleModel : [CycleModel] = [CycleModel]()
 }
 
 extension RcommendViewModel {
@@ -98,5 +100,20 @@ extension RcommendViewModel {
             finishCallBack()
         }
        // print(self.anchorsGroup)
+    }
+    //https://www.douyutv.com/api/v1/slide/6?version=2.511
+    func requestCycleData(finishCallBack:@escaping () ->()) {
+        NetworkTools.requestData(.get, URLString: "https://capi.douyucdn.cn/api/v1/slide/6", parameters: ["version" : "2.511","client_sys" : "ios"]) { (result) in
+            //1.将result转成字典类型
+            guard let resultDic = result as? [String : NSObject] else {return}
+            //2.根据data的key获取字典数组
+            guard let resultArr = resultDic["data"] as? [[String : NSObject]] else {return}
+            //3.字典转模型
+            for dic in resultArr {
+                let anchor = CycleModel(dict: dic)
+                self.cycleModel.append(anchor)
+            }
+            finishCallBack()
+        }
     }
 }
