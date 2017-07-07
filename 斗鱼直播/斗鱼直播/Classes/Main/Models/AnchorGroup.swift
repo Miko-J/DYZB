@@ -24,6 +24,8 @@ class AnchorGroup: NSObject {
     var tag_name: String = ""
     ///组显示的图标
     var icon_name: String = "home_header_normal"
+    ///游戏对应的图标
+    var icon_url: String = ""
     ///构造函数
     override init() {
     }

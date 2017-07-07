@@ -43,6 +43,8 @@
 		EE8F41F41EFCB74900DD5265 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F31EFCB74900DD5265 /* LiveViewController.swift */; };
 		EE8F41F61EFCB76100DD5265 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F51EFCB76000DD5265 /* ProfileViewController.swift */; };
 		EE8F41F81EFCB77B00DD5265 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8F41F71EFCB77B00DD5265 /* FollowViewController.swift */; };
+		EEB2B6AA1F0FB44500CDE79C /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB2B6A81F0FB44500CDE79C /* CollectionGameCell.swift */; };
+		EEB2B6AB1F0FB44500CDE79C /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB2B6A91F0FB44500CDE79C /* CollectionGameCell.xib */; };
 		EEE577461F0E4A1E00D0F558 /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE577441F0E4A1E00D0F558 /* CollectionCycleCell.swift */; };
 		EEE577471F0E4A1E00D0F558 /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE577451F0E4A1E00D0F558 /* CollectionCycleCell.xib */; };
 		EEE577491F0E5BF400D0F558 /* KGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE577481F0E5BF400D0F558 /* KGameView.swift */; };
@@ -111,6 +113,8 @@
 		EE8F41F31EFCB74900DD5265 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		EE8F41F51EFCB76000DD5265 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EE8F41F71EFCB77B00DD5265 /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		EEB2B6A81F0FB44500CDE79C /* CollectionGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
+		EEB2B6A91F0FB44500CDE79C /* CollectionGameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
 		EEE577441F0E4A1E00D0F558 /* CollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		EEE577451F0E4A1E00D0F558 /* CollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
 		EEE577481F0E5BF400D0F558 /* KGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGameView.swift; sourceTree = "<group>"; };
@@ -282,6 +286,8 @@
 				EEE577451F0E4A1E00D0F558 /* CollectionCycleCell.xib */,
 				EEE577481F0E5BF400D0F558 /* KGameView.swift */,
 				EEE5774A1F0E5C0A00D0F558 /* KGameView.xib */,
+				EEB2B6A81F0FB44500CDE79C /* CollectionGameCell.swift */,
+				EEB2B6A91F0FB44500CDE79C /* CollectionGameCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -585,6 +591,7 @@
 				EEE5774B1F0E5C0A00D0F558 /* KGameView.xib in Resources */,
 				EE8F41851EFBEBE300DD5265 /* Main.storyboard in Resources */,
 				EE39E5521F04CFC700819F47 /* KCollectionNormalCell.xib in Resources */,
+				EEB2B6AB1F0FB44500CDE79C /* CollectionGameCell.xib in Resources */,
 				EEE577471F0E4A1E00D0F558 /* CollectionCycleCell.xib in Resources */,
 				EE39E5561F04D85A00819F47 /* KCollectionPrettyCell.xib in Resources */,
 				EE8F41C11EFCB38100DD5265 /* Live.storyboard in Resources */,
@@ -675,6 +682,7 @@
 				EE39E5551F04D85A00819F47 /* KCollectionPrettyCell.swift in Sources */,
 				EE1E35BA1F01272B00547355 /* PageTitleView.swift in Sources */,
 				EE132E6B1F05DCD60045B4DA /* AnchorModel.swift in Sources */,
+				EEB2B6AA1F0FB44500CDE79C /* CollectionGameCell.swift in Sources */,
 				EE8F41801EFBEBE300DD5265 /* AppDelegate.swift in Sources */,
 				EE1E35BD1F012AEA00547355 /* UIBarButtonItem-extension.swift in Sources */,
 				EE12B3B71F026CD800C0E02B /* PageContentView.swift in Sources */,

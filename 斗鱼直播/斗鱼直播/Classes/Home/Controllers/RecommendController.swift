@@ -90,6 +90,9 @@ extension RecommendController {
         //获取推荐网络请求数据
         recommendVM.requesetData {
             self.collectionView.reloadData()
+            
+            //给gameview传递数据
+            self.kGameView.gameGroup = self.recommendVM.anchorsGroup
         }
         //获取轮播图的请求数据
         recommendVM.requestCycleData {
