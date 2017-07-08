@@ -70,7 +70,7 @@ extension KGameView : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KGameID, for: indexPath) as! CollectionGameCell
         
-        cell.group = gameGroup?[indexPath.item]
+        cell.baseGame = gameGroup?[indexPath.item]
         //cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.green
         return cell
     }

@@ -10,6 +10,7 @@ import UIKit
 
 class CollectionHeadView: UICollectionReusableView {
     
+    @IBOutlet weak var moreBtn: UIButton!
     @IBOutlet weak var iconImageVeiw: UIImageView!
     
     @IBOutlet weak var titleLable: UILabel!
