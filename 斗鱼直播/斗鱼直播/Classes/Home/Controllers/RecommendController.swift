@@ -12,6 +12,7 @@ fileprivate let KitemMargin : CGFloat = 10
 fileprivate let KitemW = (KscreenWidth - KitemMargin * 3) / 2
 fileprivate let KitemNormalH = KitemW * 3 / 4
 fileprivate let KitemPrettyH = KitemW * 4 / 3
+
 fileprivate let KcycleViewH = KscreenWidth * 3 / 8
 fileprivate let KGameViewH : CGFloat = 90
 fileprivate let KnormalCellID = "KnormalCellID"

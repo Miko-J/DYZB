@@ -27,9 +27,10 @@ class HomeViewController: UIViewController {
         //添加推荐控制器
         childVCs.append(RecommendController())
         childVCs.append(GameController())
-        for _ in 0..<2{
+        childVCs.append(AmuseController())
+        for _ in 0..<1{
             let vc = UIViewController()
-            vc.view.backgroundColor = UIColor.init(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            vc.view.backgroundColor = UIColor.andomColor()
             childVCs.append(vc)
         }
         let contentView = PageContentView(frame: contentFrame, childVCS: childVCs, parentVC:self)
