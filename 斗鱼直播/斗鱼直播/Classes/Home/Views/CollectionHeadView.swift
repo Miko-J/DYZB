@@ -23,3 +23,9 @@ class CollectionHeadView: UICollectionReusableView {
         }
     }
 }
+
+extension CollectionHeadView{
+    class func headView() -> CollectionHeadView{
+        return Bundle.main.loadNibNamed("CollectionHeadView", owner: nil, options: nil)?.first as! CollectionHeadView
+    }
+}

@@ -92,7 +92,17 @@ extension RecommendController {
             self.collectionView.reloadData()
             
             //给gameview传递数据
-            self.kGameView.gameGroup = self.recommendVM.anchorsGroup
+            var gameGroup = self.recommendVM.anchorsGroup
+            //移除前两组数据
+            gameGroup.remove(at: 0)
+            gameGroup.remove(at: 0)
+            
+            //添加更多的数据
+            let moreGroup = AnchorGroup()
+            moreGroup.tag_name = "更多"
+            gameGroup.append(moreGroup)
+            
+            self.kGameView.gameGroup = gameGroup
         }
         //获取轮播图的请求数据
         recommendVM.requestCycleData {

@@ -12,12 +12,26 @@ fileprivate let KEdgeMargin : CGFloat = 10
 fileprivate let KitemW = (KscreenWidth - KEdgeMargin * 2) / 3
 fileprivate let KitemH = KitemW * 6 / 5
 fileprivate let KHeadH : CGFloat = 50
+fileprivate let KgameViewH : CGFloat = 90
 fileprivate let KGameCellID = "KGameCellID"
 fileprivate let KGameHeadViewID = "KGameHeadViewID"
 class GameController: UIViewController {
 
     //mark: -懒加载
     fileprivate lazy var gameVM : GameViewModel = GameViewModel()
+    fileprivate lazy var collectionHeadView : CollectionHeadView = {
+        let headView = CollectionHeadView.headView()
+        headView.frame = CGRect(x: 0, y: -(KHeadH + KgameViewH), width: KscreenWidth, height: KHeadH)
+        headView.iconImageVeiw.image = UIImage(named: "Img_orange")
+        headView.titleLable.text = "常见"
+        headView.moreBtn.isHidden = true
+        return headView
+    }()
+    fileprivate lazy var gameView : KGameView = {
+        let gameView = KGameView.kGameView()
+        gameView.frame = CGRect(x: 0, y: -KgameViewH, width: KscreenWidth, height: KgameViewH)
+        return gameView
+    }()
     
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
@@ -53,6 +67,14 @@ class GameController: UIViewController {
 extension GameController{
     fileprivate func setUpUI(){
         view.addSubview(collectionView)
+        
+        //添加headView
+        collectionView.addSubview(collectionHeadView)
+        //添加gameView
+        collectionView.addSubview(gameView)
+        
+        //设置collectionView的内边距
+        collectionView.contentInset = UIEdgeInsetsMake(KHeadH + KgameViewH, 0, 0, 0)
     }
 }
 
@@ -62,6 +84,9 @@ extension GameController{
        self.gameVM.loadRequest {
             //刷新数据
             self.collectionView.reloadData()
+        
+            //传递数据,默认是60组数据，需要传10组数据
+            self.gameView.gameGroup = Array(self.gameVM.gameModels[0..<10])
         }
     }
 }

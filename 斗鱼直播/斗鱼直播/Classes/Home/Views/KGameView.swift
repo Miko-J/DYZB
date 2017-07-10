@@ -15,17 +15,8 @@ class KGameView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
     
     //定义模型属性
-    var gameGroup : [AnchorGroup]?{
+    var gameGroup : [BaseGameModel]?{
         didSet{
-            //移除前两组数据
-            gameGroup?.remove(at: 0)
-            gameGroup?.remove(at: 0)
-            
-            //添加更多的数据
-            let moreGroup = AnchorGroup()
-            moreGroup.tag_name = "更多"
-            gameGroup?.append(moreGroup)
-            
             //刷新数据
             collectionView.reloadData()
         }
