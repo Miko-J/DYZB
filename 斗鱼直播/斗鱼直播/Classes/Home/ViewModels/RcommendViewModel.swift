@@ -8,9 +8,8 @@
 
 import UIKit
 
-class RcommendViewModel {
+class RcommendViewModel : BaseAnchorViewModel{
     //mark: -主播模型数组
-    lazy var anchorsGroup : [AnchorGroup] = [AnchorGroup]()
     fileprivate lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     //颜值
     fileprivate lazy var prettyGroup : AnchorGroup = AnchorGroup()
@@ -73,25 +72,29 @@ extension RcommendViewModel {
         
         //3.请求第三部分游戏数据
         dGroup.enter()
-        NetworkTools.requestData(.get, URLString: "https://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
-            //1.将result转成字典类型
-            guard let resultDic = result as? [String : NSObject] else {return}
-            
-            //2.根据key获取字典数组
-            guard let anchorArr = resultDic["data"] as? [[String : NSObject]] else {return}
-            //3.遍历字典转成模型
-            for dic in anchorArr{
-                let group = AnchorGroup(dict: dic)
-                self.anchorsGroup.append(group)
-            }
+        loadAnchorData(URLString: "https://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { 
+            dGroup.leave()
+            finishCallBack()
+        }
+//        NetworkTools.requestData(.get, URLString: "https://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (result) in
+//            //1.将result转成字典类型
+//            guard let resultDic = result as? [String : NSObject] else {return}
+//            
+//            //2.根据key获取字典数组
+//            guard let anchorArr = resultDic["data"] as? [[String : NSObject]] else {return}
+//            //3.遍历字典转成模型
+//            for dic in anchorArr{
+//                let group = AnchorGroup(dict: dic)
+//                self.anchorsGroup.append(group)
+//            }
 //            for group in self.anchorsGroup {
 //                for anchors in group.anchors{
 //                    print(anchors.nickname)
 //                }
 //            }
 //          //4.离开组
-            dGroup.leave()
-        }
+//            dGroup.leave()
+//        }
         //5.将所有的数据请求之后排序
         dGroup.notify(queue: DispatchQueue.main){//闭包用self
             self.anchorsGroup.insert(self.prettyGroup, at: 0)

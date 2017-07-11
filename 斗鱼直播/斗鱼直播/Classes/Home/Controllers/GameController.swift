@@ -9,7 +9,7 @@
 import UIKit
 
 fileprivate let KEdgeMargin : CGFloat = 10
-fileprivate let KitemW = (KscreenWidth - KEdgeMargin * 2) / 3
+fileprivate let KgameItemW = (KscreenWidth - KEdgeMargin * 2) / 3
 fileprivate let KitemH = KitemW * 6 / 5
 fileprivate let KHeadH : CGFloat = 50
 fileprivate let KgameViewH : CGFloat = 90
@@ -35,7 +35,7 @@ class GameController: UIViewController {
     
     fileprivate lazy var collectionView : UICollectionView = {[unowned self] in
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: KitemW, height: KitemH)
+        layout.itemSize = CGSize(width: KgameItemW, height: KitemH)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .vertical
