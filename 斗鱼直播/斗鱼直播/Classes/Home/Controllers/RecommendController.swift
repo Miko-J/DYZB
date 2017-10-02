@@ -65,11 +65,15 @@ extension RecommendController {
             gameGroup.append(moreGroup)
             
             self.kGameView.gameGroup = gameGroup
+            
+            //加载数据完成
+            self.loadDataFinished()
         }
         //获取轮播图的请求数据
         recommendVM.requestCycleData {
             self.recommendCycleView.cycleModels = self.recommendVM.cycleModel
         }
+        
     }
 }
 //mark: -遵守UICollectionViewDataSource

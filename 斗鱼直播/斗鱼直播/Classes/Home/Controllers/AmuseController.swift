@@ -43,6 +43,9 @@ extension AmuseController{
             tempGroups.removeFirst()
             //传递数据
             self.amuseMenuView.anchorGroup = tempGroups;
+            
+            //加载数据完成
+            self.loadDataFinished()
         }
     }
 }

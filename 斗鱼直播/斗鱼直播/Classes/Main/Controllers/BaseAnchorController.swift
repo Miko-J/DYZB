@@ -19,7 +19,7 @@ let KPrettyCellID = "KPrettyCellID"
 fileprivate let KHeadCellID = "KHeadCellID"
 
 
-class BaseAnchorController: UIViewController {
+class BaseAnchorController: BaseViewController {
     
     //获取数据模型
     lazy var baseVM : BaseAnchorViewModel = BaseAnchorViewModel()
@@ -56,8 +56,13 @@ class BaseAnchorController: UIViewController {
 
 //mark: -设置ui
 extension BaseAnchorController{
-    func setUpUI(){
+    override func setUpUI(){
+        //给contentView赋值
+        contentView = contentView
+        //添加collectionView
         view.addSubview(collectionView)
+        //调用super
+        super.setUpUI()
     }
 }
 
