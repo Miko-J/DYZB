@@ -73,7 +73,7 @@ extension BaseAnchorController{
 }
 
 //mark: -遵守UICollectionViewDataSource
-extension BaseAnchorController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+extension BaseAnchorController : UICollectionViewDataSource{
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return baseVM.anchorsGroup.count
     }
@@ -94,5 +94,27 @@ extension BaseAnchorController : UICollectionViewDataSource,UICollectionViewDele
         return headView
     }
     
+}
+
+//MARK: -遵守UICollectionViewDelegateFlowLayout
+extension BaseAnchorController : UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //获取模型数据,对应的主播数据
+        let anchor = baseVM.anchorsGroup[indexPath.section].anchors[indexPath.item]
+        //判断是直播还是show场
+        anchor.isVertical == 0 ? pushNormalRoom() : presentShowRoom()
+    }
+    
+    fileprivate func pushNormalRoom(){
+        let normarlRoomVC = RoomNormalViewController()
+        
+        navigationController?.pushViewController(normarlRoomVC, animated: true)
+    }
+    
+    fileprivate func presentShowRoom(){
+        let showRoomVC = RoomShowViewController()
+        
+        present(showRoomVC, animated: true, completion: nil)
+    }
 }
 

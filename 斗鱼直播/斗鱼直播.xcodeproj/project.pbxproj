@@ -60,6 +60,9 @@
 		EEDE424E1F820A5C0075BEAD /* FunnyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE424D1F820A5C0075BEAD /* FunnyViewController.swift */; };
 		EEDE42501F82101A0075BEAD /* FunnyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE424F1F82101A0075BEAD /* FunnyViewModel.swift */; };
 		EEDE42521F82189B0075BEAD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE42511F82189B0075BEAD /* BaseViewController.swift */; };
+		EEDE42581F82244A0075BEAD /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE42571F82244A0075BEAD /* RoomShowViewController.swift */; };
+		EEDE425A1F8224580075BEAD /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE42591F8224580075BEAD /* RoomNormalViewController.swift */; };
+		EEDE425E1F822A0A0075BEAD /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE425D1F822A0A0075BEAD /* CustomNavigationViewController.swift */; };
 		EEE577461F0E4A1E00D0F558 /* CollectionCycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE577441F0E4A1E00D0F558 /* CollectionCycleCell.swift */; };
 		EEE577471F0E4A1E00D0F558 /* CollectionCycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE577451F0E4A1E00D0F558 /* CollectionCycleCell.xib */; };
 		EEE577491F0E5BF400D0F558 /* KGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE577481F0E5BF400D0F558 /* KGameView.swift */; };
@@ -145,6 +148,9 @@
 		EEDE424D1F820A5C0075BEAD /* FunnyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewController.swift; sourceTree = "<group>"; };
 		EEDE424F1F82101A0075BEAD /* FunnyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunnyViewModel.swift; sourceTree = "<group>"; };
 		EEDE42511F82189B0075BEAD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EEDE42571F82244A0075BEAD /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
+		EEDE42591F8224580075BEAD /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
+		EEDE425D1F822A0A0075BEAD /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		EEE577441F0E4A1E00D0F558 /* CollectionCycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCycleCell.swift; sourceTree = "<group>"; };
 		EEE577451F0E4A1E00D0F558 /* CollectionCycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCycleCell.xib; sourceTree = "<group>"; };
 		EEE577481F0E5BF400D0F558 /* KGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KGameView.swift; sourceTree = "<group>"; };
@@ -269,6 +275,7 @@
 		EE8F41C81EFCB4C400DD5265 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EEDE42531F8224260075BEAD /* Room */,
 				EE8F41E81EFCB58200DD5265 /* Follow */,
 				EE8F41D31EFCB4C400DD5265 /* Home */,
 				EE8F41D81EFCB4C400DD5265 /* Live */,
@@ -390,8 +397,9 @@
 			children = (
 				EE8F41831EFBEBE300DD5265 /* Main.storyboard */,
 				EE8F41ED1EFCB65900DD5265 /* MainTarBarViewController.swift */,
-				EEB2B6C41F145CFF00CDE79C /* BaseAnchorController.swift */,
 				EEDE42511F82189B0075BEAD /* BaseViewController.swift */,
+				EEB2B6C41F145CFF00CDE79C /* BaseAnchorController.swift */,
+				EEDE425D1F822A0A0075BEAD /* CustomNavigationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -514,6 +522,39 @@
 			sourceTree = "<group>";
 		};
 		EE8F41EC1EFCB58200DD5265 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EEDE42531F8224260075BEAD /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE42541F8224260075BEAD /* Controllers */,
+				EEDE42551F8224260075BEAD /* Models */,
+				EEDE42561F8224260075BEAD /* Views */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		EEDE42541F8224260075BEAD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EEDE42571F82244A0075BEAD /* RoomShowViewController.swift */,
+				EEDE42591F8224580075BEAD /* RoomNormalViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EEDE42551F8224260075BEAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EEDE42561F8224260075BEAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -743,6 +784,7 @@
 				EE1E35BF1F012B1000547355 /* Common.swift in Sources */,
 				EE132E6D1F05DF870045B4DA /* NSDate-Extension.swift in Sources */,
 				EEDE424E1F820A5C0075BEAD /* FunnyViewController.swift in Sources */,
+				EEDE425A1F8224580075BEAD /* RoomNormalViewController.swift in Sources */,
 				EEB2B6B11F10CA3D00CDE79C /* GameModel.swift in Sources */,
 				EE1D284E1F04A46500F40A70 /* RecommendController.swift in Sources */,
 				EE132E721F09F1860045B4DA /* CollectionBaseCell.swift in Sources */,
@@ -762,6 +804,8 @@
 				EEB2B6B31F10CAFE00CDE79C /* BaseGameModel.swift in Sources */,
 				EEE577491F0E5BF400D0F558 /* KGameView.swift in Sources */,
 				EE8F41F21EFCB72D00DD5265 /* HomeViewController.swift in Sources */,
+				EEDE425E1F822A0A0075BEAD /* CustomNavigationViewController.swift in Sources */,
+				EEDE42581F82244A0075BEAD /* RoomShowViewController.swift in Sources */,
 				EE132E7B1F0A41710045B4DA /* RecommendCycleView.swift in Sources */,
 				EE132E7F1F0A57780045B4DA /* CycleModel.swift in Sources */,
 				EE12B3B91F02700700C0E02B /* UIColor-Extension.swift in Sources */,
