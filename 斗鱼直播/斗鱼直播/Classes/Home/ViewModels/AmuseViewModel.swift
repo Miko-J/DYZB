@@ -15,7 +15,7 @@ class AmuseViewModel: BaseAnchorViewModel{
 extension AmuseViewModel{
     func loadAmuseData(finishedCallBack: @escaping () -> ()){
         
-        loadAnchorData(URLString: "https://capi.douyucdn.cn/api/v1/getHotRoom/2", finishedCallBack: finishedCallBack)
+        loadAnchorData(isGroupData:true,  URLString: "https://capi.douyucdn.cn/api/v1/getHotRoom/2", finishedCallBack: finishedCallBack)
 
     }
 }

@@ -14,17 +14,26 @@ class BaseAnchorViewModel {
 
 
 extension BaseAnchorViewModel{
-    func loadAnchorData(URLString:String, parameters:[String : Any]? = nil,finishedCallBack:@escaping ()->()){
+    func loadAnchorData(isGroupData:Bool, URLString:String, parameters:[String : Any]? = nil,finishedCallBack:@escaping ()->()){
         NetworkTools.requestData(.get, URLString: URLString,parameters: parameters) { (result) in
             //将结果进行处理
             guard let resultDic = result as? [String : Any] else {return}
             guard let resultArr = resultDic["data"] as? [[String : Any]] else {return}
             
-            //字典转模型
-            for dic in resultArr {
-                self.anchorsGroup.append(AnchorGroup(dict: dic))
-            }
             
+            if isGroupData{
+                //字典转模型
+                for dic in resultArr {
+                    self.anchorsGroup.append(AnchorGroup(dict: dic))
+                }
+            }else{
+                let group = AnchorGroup()
+                for dic in resultArr{
+                    group.anchors.append(AnchorModel(dict:dic))
+                }
+                self.anchorsGroup.append(group)
+            }
+
             //回调
             finishedCallBack()
         }

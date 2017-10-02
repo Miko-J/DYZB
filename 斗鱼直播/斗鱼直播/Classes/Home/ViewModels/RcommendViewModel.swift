@@ -72,7 +72,7 @@ extension RcommendViewModel {
         
         //3.请求第三部分游戏数据
         dGroup.enter()
-        loadAnchorData(URLString: "https://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { 
+        loadAnchorData(isGroupData:true, URLString: "https://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { 
             dGroup.leave()
             finishCallBack()
         }

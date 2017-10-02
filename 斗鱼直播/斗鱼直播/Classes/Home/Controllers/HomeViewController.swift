@@ -28,11 +28,12 @@ class HomeViewController: UIViewController {
         childVCs.append(RecommendController())
         childVCs.append(GameController())
         childVCs.append(AmuseController())
-        for _ in 0..<1{
-            let vc = UIViewController()
-            vc.view.backgroundColor = UIColor.andomColor()
-            childVCs.append(vc)
-        }
+        childVCs.append(FunnyViewController())
+//        for _ in 0..<1{
+//            let vc = UIViewController()
+//            vc.view.backgroundColor = UIColor.andomColor()
+//            childVCs.append(vc)
+//        }
         let contentView = PageContentView(frame: contentFrame, childVCS: childVCs, parentVC:self)
         contentView.delegate = self
         return contentView
